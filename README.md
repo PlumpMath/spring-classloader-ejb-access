@@ -16,16 +16,16 @@ Please look and javadoc of classes listed below to find out how to configure and
 If you wat to use this code you should probably look an these classes and their javadoc. Three first classes is wath you probably want
 if you need to connect to remote stateless session bean on WAS
 
-* [LibDirClassLoaderFactoryBean}(./src/main/java/org/github/djarosz/spring/ejb/access/LibDirClassLoaderFactoryBean}
-  - use this to define class loader which will include all classes in all jars in specified directory
-* [WASRemoteStatelessSessionProxyFactoryBean}(./src/main/java/org/github/djarosz/spring/ejb/access/WASRemoteStatelessSessionProxyFactoryBean}
-  - This one is used to connect to WebSphere application server from non IBM JVM. *javadoc includes spring configuration example*
-* [ClassLoaderUtilDelegate}(./src/main/java/org/github/djarosz/spring/ejb/access/ClassLoaderUtilDelegate}
-  - Read javadoc as it gives cutial part of how to setup system wide java properties so WAS connections are actualy handled by appropriate classloader
-* [ClassLoaderAwareRemoteStatelessSessionProxyFactoryBean}(./src/main/java/org/github/djarosz/spring/ejb/access/ClassLoaderAwareRemoteStatelessSessionProxyFactoryBean}
-  - crates proxy to remote stateless session bean and ensures all calls are made in specified classloader
-* [ClassLoaderAwareJndiTemplate}(./src/main/java/org/github/djarosz/spring/ejb/access/ClassLoaderAwareJndiTemplate}
-  - used to look up remote session beans in context of given classloader
+* [LibDirClassLoaderFactoryBean](./src/main/java/org/github/djarosz/spring/ejb/access/LibDirClassLoaderFactoryBean)
+  use this to define class loader which will include all classes in all jars in specified directory
+* [WASRemoteStatelessSessionProxyFactoryBean](./src/main/java/org/github/djarosz/spring/ejb/access/WASRemoteStatelessSessionProxyFactoryBean)
+  This one is used to connect to WebSphere application server from non IBM JVM. **javadoc includes spring configuration example**
+* [ClassLoaderUtilDelegate](./src/main/java/org/github/djarosz/spring/ejb/access/ClassLoaderUtilDelegate)
+  Read javadoc as it gives cutial part of how to setup system wide java properties so WAS connections are actualy handled by appropriate classloader
+* [ClassLoaderAwareRemoteStatelessSessionProxyFactoryBean](./src/main/java/org/github/djarosz/spring/ejb/access/ClassLoaderAwareRemoteStatelessSessionProxyFactoryBean)
+  crates proxy to remote stateless session bean and ensures all calls are made in specified classloader
+* [ClassLoaderAwareJndiTemplate](./src/main/java/org/github/djarosz/spring/ejb/access/ClassLoaderAwareJndiTemplate)
+  used to look up remote session beans in context of given classloader
 
 ## External libraries needed to connect to remote WebSphre Application Server
 
