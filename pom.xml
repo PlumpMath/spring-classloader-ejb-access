@@ -1,17 +1,17 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.github.djarosz.spring</groupId>
 	<artifactId>spring-classloader-ejb-access</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 
 	<scm>
 		<connection>scm:git:git@github.com:djarosz/spring-classloader-ejb-access.git</connection>
 		<url>scm:git:git@github.com:djarosz/spring-classloader-ejb-access.git</url>
 		<developerConnection>scm:git:git@github.com:djarosz/spring-classloader-ejb-access.git</developerConnection>
-	</scm>
+	  <tag>spring-classloader-ejb-access-1.0.0</tag>
+  </scm>
 
 	<dependencies>
 		<dependency>
