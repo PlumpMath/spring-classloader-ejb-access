@@ -1,10 +1,10 @@
 # spring-classloader-ejb-access
 
-This project was created because I needed to connect to SessionBeasn hosted on WebSphere application serer from java palikcation
+This project was created because I needed to connect to SessionBeasn hosted on WebSphere Application Server from java application
 runing on non IBM JVM (Oraccle/openjdk). Spring already has RemoteStatelessSessionProxyFactoryBean which allows you to connect to remote server
-but in my configuration i had many such remote stateless session beans each had to use different user and credentials.
+but in my configuration i had many such remote stateless session beans each had to use different user credentials.
 Since authentication code is hardcoded into IBM libraries (which are obviously not open source) and uses some kind of static class variables the solution
-is to load and invoke each such stateless session bean in different classloader. It is not optimal in contet of memory usage but it works.
+is to load and invoke each such stateless session bean in different classloader. It is not optimal in context of memory usage but it works.
 
 This project extends spring RemoteStatelessSessionProxyFactoryBean and allows you to create and invoke remote session bean using
 classloader given as property. This mechanism is rathre generic so you can probably use this module for other purposes (not just connecting to WAS).
