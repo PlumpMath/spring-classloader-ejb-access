@@ -1,6 +1,6 @@
-package org.github.djarosz.spring.ejb.access;
+package com.github.djarosz.spring.ejb.access;
 
-import static org.github.djarosz.spring.ejb.access.ClassLoaderActionHelper.doInClassLoader;
+import static com.github.djarosz.spring.ejb.access.ClassLoaderActionHelper.doInClassLoader;
 
 import java.util.Properties;
 import javax.naming.NamingException;

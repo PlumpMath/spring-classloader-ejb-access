@@ -1,4 +1,4 @@
-package org.github.djarosz.spring.ejb.access;
+package com.github.djarosz.spring.ejb.access;
 
 import java.rmi.NoSuchObjectException;
 import java.rmi.Remote;
@@ -22,12 +22,12 @@ import org.omg.CORBA.portable.OutputStream;
  * <p>
  * To solve this problem set these <b>system</b> properties:
  * <pre>
- *     javax.rmi.CORBA.UtilClass=org.github.djarosz.spring.ejb.access.ClassLoaderUtilDelegate
+ *     javax.rmi.CORBA.UtilClass=ClassLoaderUtilDelegate
  *	   javax.rmi.CORBA.ClassLoaderUtilDelegate.UtilClass=to the util real UtilDelegate iimplementation
  * </pre>
  * eg
  * <pre>
- *     javax.rmi.CORBA.UtilClass=org.github.djarosz.spring.ejb.accesslassLoaderUtilDelegate
+ *     javax.rmi.CORBA.UtilClass=com.github.djarosz.spring.ejb.accesslassLoaderUtilDelegate
  *	   javax.rmi.CORBA.ClassLoaderUtilDelegate.UtilClass=com.ibm.ws.orb.WSUtilDelegateImpl
  * </pre>
  *

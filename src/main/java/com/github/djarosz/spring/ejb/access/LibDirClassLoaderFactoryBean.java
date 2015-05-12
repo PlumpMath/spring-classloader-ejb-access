@@ -1,4 +1,4 @@
-package org.github.djarosz.spring.ejb.access;
+package com.github.djarosz.spring.ejb.access;
 
 import java.io.File;
 import java.io.FileFilter;

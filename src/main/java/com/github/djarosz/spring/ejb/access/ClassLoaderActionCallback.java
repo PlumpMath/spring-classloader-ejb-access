@@ -1,4 +1,4 @@
-package org.github.djarosz.spring.ejb.access;
+package com.github.djarosz.spring.ejb.access;
 
 public interface ClassLoaderActionCallback<T> {
 
