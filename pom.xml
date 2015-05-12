@@ -4,13 +4,13 @@
 
 	<groupId>com.github.djarosz.spring</groupId>
 	<artifactId>spring-classloader-ejb-access</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.1.0</version>
 
 	<scm>
 		<connection>scm:git:git@github.com:djarosz/spring-classloader-ejb-access.git</connection>
 		<url>scm:git:git@github.com:djarosz/spring-classloader-ejb-access.git</url>
 		<developerConnection>scm:git:git@github.com:djarosz/spring-classloader-ejb-access.git</developerConnection>
-	  <tag>HEAD</tag>
+	  <tag>spring-classloader-ejb-access-1.1.0</tag>
   </scm>
 
 	<dependencies>
