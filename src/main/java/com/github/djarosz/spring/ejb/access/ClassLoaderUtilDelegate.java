@@ -22,13 +22,13 @@ import org.omg.CORBA.portable.OutputStream;
  * <p>
  * To solve this problem set these <b>system</b> properties:
  * <pre>
- *     javax.rmi.CORBA.UtilClass=ClassLoaderUtilDelegate
- *	   javax.rmi.CORBA.ClassLoaderUtilDelegate.UtilClass=to the util real UtilDelegate iimplementation
+ *  	javax.rmi.CORBA.UtilClass=ClassLoaderUtilDelegate
+ *		javax.rmi.CORBA.ClassLoaderUtilDelegate.UtilClass=to the util real UtilDelegate iimplementation
  * </pre>
  * eg
  * <pre>
- *     javax.rmi.CORBA.UtilClass=com.github.djarosz.spring.ejb.accesslassLoaderUtilDelegate
- *	   javax.rmi.CORBA.ClassLoaderUtilDelegate.UtilClass=com.ibm.ws.orb.WSUtilDelegateImpl
+ *		javax.rmi.CORBA.UtilClass=com.github.djarosz.spring.ejb.access,ClassLoaderUtilDelegate
+ *		javax.rmi.CORBA.ClassLoaderUtilDelegate.UtilClass=com.ibm.ws.orb.WSUtilDelegateImpl
  * </pre>
  *
  * This ensures that any call to {@link javax.rmi.CORBA.Util} method will result in calling real UtilDelegate class

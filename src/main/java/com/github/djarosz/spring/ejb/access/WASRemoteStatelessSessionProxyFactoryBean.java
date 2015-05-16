@@ -15,14 +15,14 @@ import org.apache.log4j.Logger;
  *     <li>-Dorg.omg.CORBA.ORBSingletonClass=com.ibm.rmi.corba.ORBSingleton"
  *     <li>-Djavax.rmi.CORBA.StubClass=com.ibm.rmi.javax.rmi.CORBA.StubDelegateImpl"
  *     <li>-Djavax.rmi.CORBA.PortableRemoteObjectClass=com.ibm.rmi.javax.rmi.PortableRemoteObject"
- *     <li>-Djavax.rmi.CORBA.UtilClass=ClassLoaderUtilDelegate"
+ *     <li>-Djavax.rmi.CORBA.UtilClass=com.github.djarosz.spring.ejb.access.ClassLoaderUtilDelegate"
  *     <li>-Djavax.rmi.CORBA.ClassLoaderUtilDelegate.UtilClass=com.ibm.ws.orb.WSUtilDelegateImpl"
  * </ul>
  *
  * To configure in spring use some thing like this
  * <pre>
  *     	&lt;bean id="ibmCorbaClassloader" class="LibDirClassLoaderFactoryBean" scope="prototype"&gt;
- *			&lt;property name="directory" value="${catalina.home}/lib-nsp/websphere"/&gt;
+ *			&lt;property name="directory" value="/some/dir//lib/websphere"/&gt;
  *			&lt;property name="recursive" value="true"/&gt;
  *		&lt;/bean&gt;
  *
@@ -84,20 +84,17 @@ import org.apache.log4j.Logger;
  *		&lt;/property&gt;
  *	&lt;/bean&gt;
  *
- *	&lt;!-- CCFacade proxy --&gt;
- *		&lt;bean id="ccFacade"
- *		class="WASRemoteStatelessSessionProxyFactoryBean"
- *		lazy-init="true"&gt;
+ *	&lt;bean id="ccFacade" class="WASRemoteStatelessSessionProxyFactoryBean" lazy-init="true"&gt;
  *		&lt;property name="classLoader" ref="ibmCorbaClassloader"/&gt;
  *		&lt;property name="lookupHomeOnStartup" value="false"/&gt;
  *		&lt;property name="refreshHomeOnConnectFailure" value="true"/&gt;
  *		&lt;property name="resourceRef" value="false"/&gt;
  *		&lt;property name="businessInterface" value="com.example.SessionBean"/&gt;
  *		&lt;property name="timeout" value="${CORBA.methodInvocationTimeout}"/&gt;
- *		&lt;property name="jndiName" value="${ccfacade.jndi.name}"/&gt;
- *		&lt;property name="providerUrl" value="${ccfacade.provider.url}"/&gt;
- *		&lt;property name="user" value="${ccfacade.login}"/&gt;
- *		&lt;property name="password" value="${ccfacade.password}"/&gt;
+ *		&lt;property name="jndiName" value="${was.target.session.bean.jndi.name}"/&gt;
+ *		&lt;property name="providerUrl" value="${was.target.session.bean.provider.url}"/&gt;
+ *		&lt;property name="user" value="${was.target.session.bean.login}"/&gt;
+ *		&lt;property name="password" value="${was.target.session.bean.password}"/&gt;
  *		&lt;property name="jndiEnvironment" ref="commonCorbaProperties"/&gt;
  *	&lt;/bean&gt;
  * </pre>
