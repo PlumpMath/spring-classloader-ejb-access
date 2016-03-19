@@ -27,7 +27,7 @@ if you need to connect to remote stateless session bean on WAS
 * [ClassLoaderAwareJndiTemplate](./src/main/java/com/github/djarosz/spring/ejb/access/ClassLoaderAwareJndiTemplate.java)
   used to look up remote session beans in context of given classloader
 
-## Example bean definiotions to connect to WAS stateles session bean
+## Example bean definitions required to connect to WAS stateless session bean
 
 Use this to connect to Websphere Application Server secured StatelessSession beans.
 You need to set these to be set as system properties (witch -D jvm params):
@@ -105,7 +105,7 @@ To configure in spring use some thing like this
   </property>
 </bean>
 
-<bean id="ccFacade" class="WASRemoteStatelessSessionProxyFactoryBean"
+<bean id="remoteEJBOnWAS" class="WASRemoteStatelessSessionProxyFactoryBean"
   lazy-init="true">
   <property name="classLoader" ref="ibmCorbaClassloader"/>
   <property name="lookupHomeOnStartup" value="false"/>
@@ -121,7 +121,7 @@ To configure in spring use some thing like this
 </bean>
 ```
 
-### External libraries needed to connect to remote WebSphre Application Server
+### External libraries needed to connect to remote WebSphere Application Server
 
 For use witch WAS you still need some jar's from IBM (it's probably WAS version dependent). Usually these will suffice:
 - bootstrap.jar

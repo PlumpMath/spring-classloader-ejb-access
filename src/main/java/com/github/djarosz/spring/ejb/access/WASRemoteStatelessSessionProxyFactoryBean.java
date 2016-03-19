@@ -84,7 +84,7 @@ import org.apache.log4j.Logger;
  *		&lt;/property&gt;
  *	&lt;/bean&gt;
  *
- *	&lt;bean id="ccFacade" class="WASRemoteStatelessSessionProxyFactoryBean" lazy-init="true"&gt;
+ *	&lt;bean id="remoteEJBOnWAS" class="WASRemoteStatelessSessionProxyFactoryBean" lazy-init="true"&gt;
  *		&lt;property name="classLoader" ref="ibmCorbaClassloader"/&gt;
  *		&lt;property name="lookupHomeOnStartup" value="false"/&gt;
  *		&lt;property name="refreshHomeOnConnectFailure" value="true"/&gt;
